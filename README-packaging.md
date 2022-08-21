@@ -1,4 +1,4 @@
-# Packaging and publishing on PlatformIO Registry
+# Packaging and publishing
 
 ## Check list
 
@@ -8,3 +8,9 @@
   * [ ] dependencies
 * [ ] README includes new release notes
 * [ ] git tag is done and pushed
+
+## Publish on PlatformIO Registry
+
+```
+pio pkg publish --owner sporniket --type library
+```
