@@ -1,6 +1,17 @@
 # AnimatedValues
 C++ library for PlatformIO, for having a value following an animation sequence
 
+## LICENSE
+
+GPL v3
+
+## What's new
+
+### v0.0.1
+
+Initial publishing, extracted from working code.
+
+
 ## Typical application
 
 ```cpp
