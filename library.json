@@ -1,6 +1,6 @@
 {
     "name": "AnimatedValues",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "C++ library for PlatformIO, for having a value following an animation sequence",
     "keywords": "animation, sequence",
     "repository": {
@@ -10,7 +10,6 @@
     "authors": [
         {
             "name": "David SPORN",
-            "email": "me@andrew-smith.com",
             "url": "https://github.com/sporniket",
             "maintainer": true
         }
