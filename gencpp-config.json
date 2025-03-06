@@ -1,0 +1,11 @@
+{
+    "copyright":{
+       "years":"2021~2025",
+       "authors":"David SPORN"
+    },
+    "project":{
+       "name":"Animated values",
+       "description":"Created to help you go beyond a simple blinking.",
+       "licence":"GPL-3.0-or-later"
+    }
+}

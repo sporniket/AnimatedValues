@@ -1,19 +1,12 @@
-// Copyright 2021,2022 David SPORN
-// ---
-// This file is part of 'AnimatedValues'.
-// ---
-// 'AnimatedValues' is free software: you can redistribute it and/or 
-// modify it under the terms of the GNU General Public License as published 
-// by the Free Software Foundation, either version 3 of the License, or 
-// (at your option) any later version.
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/****************************************
 
-// 'AnimatedValues' is distributed in the hope that it will be useful, 
-// but WITHOUT ANY WARRANTY; without even the implied warranty of 
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General 
-// Public License for more details.
-
-// You should have received a copy of the GNU General Public License along 
-// with 'AnimatedValues'. If not, see <https://www.gnu.org/licenses/>. 
+---
+Copyright (C) 2021~2025 David SPORN
+---
+This is part of **Animated values**.
+Created to help you go beyond a simple blinking.
+****************************************/
 
 #include "AnimatedBool.hpp"
 
