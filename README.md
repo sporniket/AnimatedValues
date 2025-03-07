@@ -2,6 +2,8 @@
 C++ library for PlatformIO, for having a value following an animation sequence
 
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/sporniket/library/AnimatedValues.svg)](https://registry.platformio.org/libraries/sporniket/AnimatedValues)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/sporniket/AnimatedValues/main)
+
 
 ## LICENSE
 
