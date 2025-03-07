@@ -8,9 +8,7 @@
 
 ## Run the test suite
 
-1. Create a build directory : `mkdir build`
-2. Change to this build directory : `cd build`
-3. Initialize the build system : `cmake ..`
-4. Invoke the build system to perform the test suite :
-   * either `cmake --build . -- verify` to build incrementally.
-   * or `cmake --build . --clean-first -- verify` to trigger a full rebuild.
+1. Initialize cmake and put cmake data into a 'build' folder : `cmake -Bbuild`
+4. Invoke the build system to perform the test suite (the space before `verify` is NOT a typo) :
+   * either `cmake --build build -- verify` to build incrementally.
+   * or `cmake --build build --clean-first -- verify` to trigger a full rebuild.
