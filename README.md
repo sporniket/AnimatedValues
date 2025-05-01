@@ -31,7 +31,7 @@ _See also [the showcase/maintenance project](https://github.com/sporniket/demo-t
 ```cpp
 //include stuff
 //...
-#include "AnimatedBool.hpp"
+#include "cmspk/animval.hpp"
 
 #define MY_LED_PIN whatever
 

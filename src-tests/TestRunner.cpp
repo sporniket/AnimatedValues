@@ -10,7 +10,7 @@ Created to help you go beyond a simple blinking.
 #include <criterion/criterion.h>
 // FIXME includes your hpp files from ../include
 // e.g. #include "whatever.hpp"
-#include "AnimatedBool.hpp"
+#include "cmspk/animval.hpp"
 
 using cmspk::animval::AnimatedBool ;
 

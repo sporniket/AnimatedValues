@@ -8,6 +8,9 @@ This is part of **Animated values**.
 Created to help you go beyond a simple blinking led.
 ****************************************/
 
+#ifndef CMSPK__ANIMVAL__ANIMATED_BOOL__HPP
+#define CMSPK__ANIMVAL__ANIMATED_BOOL__HPP
+
 // interfaces
 // Animated values library
 // An animated value is a collection of values that can be iterated upon.
@@ -17,9 +20,6 @@ Created to help you go beyond a simple blinking led.
 
 namespace cmspk {};
 
-/**
- * Animated values library ; An animated value is a collection of values that can be iterated upon.
- */
 namespace cmspk::animval {
 /**
  * Animated boolean, typically used to blink a status LED ; to instanciate animations more easily, it also provide a helper method `createAnimation(...)`.
@@ -87,3 +87,5 @@ class AnimatedBool
 };
 
 };
+
+#endif

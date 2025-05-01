@@ -8,7 +8,7 @@ This is part of **Animated values**.
 Created to help you go beyond a simple blinking.
 ****************************************/
 
-#include "AnimatedBool.hpp"
+#include "cmspk/animval/AnimatedBool.hpp"
 
 using cmspk::animval::AnimatedBool ;
 
