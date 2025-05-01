@@ -2,6 +2,7 @@
 # ide stuff
 .vscode
 build
+local.*
 
 ###
 # tarballs

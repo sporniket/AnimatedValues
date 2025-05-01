@@ -5,7 +5,7 @@
 Copyright (C) 2021~2025 David SPORN
 ---
 This is part of **Animated values**.
-Created to help you go beyond a simple blinking.
+Created to help you go beyond a simple blinking led.
 ****************************************/
 
 // interfaces
@@ -15,6 +15,9 @@ Created to help you go beyond a simple blinking.
 #include <string>
 #include <vector>
 
+/**
+ * Animated boolean, typically used to blink a status LED ; to instanciate animations more easily, it also provide a helper method `createAnimation(...)`.
+ */
 class AnimatedBool
 {
   private:
@@ -28,9 +31,9 @@ class AnimatedBool
     /**
      * Helper to create an animation from a codified string.
      *
-     * @param asTrue char for coding a true, any other char will be coding a false
-     * @param sequence string to parse.
-     * @returns an animated bool.
+     * @param asTrue char for coding a true, any other char will be coding a false ; e.g. `"*"`.
+     * @param sequence string to parse, e.g. `".*.*......"`.
+     * @returns a `std::vector<bool>` that can be used to create or update an `AnimatedBool`.
      */
     static std::vector<bool> *createAnimation(char asTrue, std::string sequence);
 
@@ -45,15 +48,15 @@ class AnimatedBool
     AnimatedBool *append(std::vector<bool> *animation);
 
     /**
-     * Get the animation set size, one cannot set the current animation outside this range.
+     * Get the animation list size, one cannot set the current animation outside this range.
      */
     int getAnimationCount();
 
     /**
-     * Change the animation, nothing happens if the value is out of range.
+     * Change the active animation, nothing happens if the value is out of range.
      *
      * @param value the index of the animation in the list.
-     * @returns the actual animation index.
+     * @returns the actual animation index in the list.
      */
     int setCurrentAnimation(int value);
 

@@ -5,7 +5,7 @@
     },
     "project":{
        "name":"Animated values",
-       "description":"Created to help you go beyond a simple blinking.",
+       "description":"Created to help you go beyond a simple blinking led.",
        "licence":"GPL-3.0-or-later"
     }
 }
