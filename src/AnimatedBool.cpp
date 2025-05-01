@@ -22,7 +22,7 @@ std::vector<bool> *AnimatedBool::createAnimation(char asTrue, const std::string 
     return result;
 }
 
-void AnimatedBool::handleCurrentChanged() { animationIterator = animationList[current]->begin(); }
+void AnimatedBool::handleCurrentChanged() { animationIterator = animationList.at(current)->begin(); }
 
 AnimatedBool::AnimatedBool(std::vector<bool> *animation)
 {
@@ -51,25 +51,25 @@ int AnimatedBool::setCurrentAnimation(int value)
 
 bool AnimatedBool::run()
 {
-    if (0 == animationList[current]->size())
+    if (0 == animationList.at(current)->size())
     {
         return false;
     }
     ++animationIterator;
-    if (animationIterator == animationList[current]->end())
+    if (animationIterator == animationList.at(current)->end())
     {
-        animationIterator = animationList[current]->begin();
+        animationIterator = animationList.at(current)->begin();
     }
     return value();
 }
 
 bool AnimatedBool::runOnce()
 {
-    if (0 == animationList[current]->size())
+    if (0 == animationList.at(current)->size())
     {
         return false;
     }
-    if (animationIterator != animationList[current]->end())
+    if (animationIterator != animationList.at(current)->end())
     {
         ++animationIterator;
     }
