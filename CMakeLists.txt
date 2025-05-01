@@ -9,7 +9,7 @@
 # HOWEVER there is a test suite that can be compiled and invoked
 # ---
 # How to build and verify
-# 
+#
 # 1. Create a build directory : `mkdir built-tests`
 # 2. Change to this build directory : `cd build-tests`
 # 3. Initialize the build system : `cmake ..`
@@ -23,3 +23,23 @@ set(CMAKE_CXX_STANDARD 11)
 
 # The test suite is implemented in a dedicated source folder.
 add_subdirectory(src-tests)
+
+# Add clang-format tasks
+file(GLOB_RECURSE FORMATTABLE_SOURCES
+       ${PROJECT_SOURCE_DIR}/include/*.hpp
+       ${PROJECT_SOURCE_DIR}/src/*.cpp
+       ${PROJECT_SOURCE_DIR}/src-tests/*.cpp
+)
+message("Formattable sources -> ${FORMATTABLE_SOURCES}")
+add_custom_target(check-prettier
+    COMMAND clang-format
+    --dry-run
+    --style=file
+    ${FORMATTABLE_SOURCES}
+)
+add_custom_target(prettier
+    COMMAND clang-format
+    -i
+    --style=file
+    ${FORMATTABLE_SOURCES}
+)

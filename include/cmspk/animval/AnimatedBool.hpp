@@ -22,10 +22,10 @@ namespace cmspk {};
 
 namespace cmspk::animval {
 /**
- * Animated boolean, typically used to blink a status LED ; to instanciate animations more easily, it also provide a helper method `createAnimation(...)`.
+ * Animated boolean, typically used to blink a status LED ; to instanciate animations
+ * more easily, it also provide a helper method `createAnimation(...)`.
  */
-class AnimatedBool
-{
+class AnimatedBool {
   private:
     std::vector<std::vector<bool> *> animationList;
     int current = 0;
@@ -86,6 +86,6 @@ class AnimatedBool
     bool value();
 };
 
-};
+};  // namespace cmspk::animval
 
 #endif
