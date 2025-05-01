@@ -15,6 +15,12 @@ Created to help you go beyond a simple blinking led.
 #include <string>
 #include <vector>
 
+namespace cmspk {};
+
+/**
+ * Animated values library ; An animated value is a collection of values that can be iterated upon.
+ */
+namespace cmspk::animval {
 /**
  * Animated boolean, typically used to blink a status LED ; to instanciate animations more easily, it also provide a helper method `createAnimation(...)`.
  */
@@ -78,4 +84,6 @@ class AnimatedBool
      * @returns the current value.
      */
     bool value();
+};
+
 };

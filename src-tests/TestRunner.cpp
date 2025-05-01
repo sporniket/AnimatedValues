@@ -12,15 +12,17 @@ Created to help you go beyond a simple blinking.
 // e.g. #include "whatever.hpp"
 #include "AnimatedBool.hpp"
 
+using cmspk::animval::AnimatedBool ;
+
 Test (AnimatedBool, getAnimationCount_should_return_the_number_of_different_animations) {
-    AnimatedBool multipleAnimations = AnimatedBool::createAnimation('*', ".*.*......") ; 
+    AnimatedBool multipleAnimations = AnimatedBool::createAnimation('*', ".*.*......") ;
     multipleAnimations.append(AnimatedBool::createAnimation('*',"****....")) ;
 
     cr_assert_eq(multipleAnimations.getAnimationCount(),2, "Expected 2 animations, got %d", multipleAnimations.getAnimationCount());
 }
 
 Test (AnimatedBool, createAnimation_should_create_a_runnable_animation) {
-    AnimatedBool blinkTwiceEveryTenSteps = AnimatedBool::createAnimation('*', ".*.*......") ; 
+    AnimatedBool blinkTwiceEveryTenSteps = AnimatedBool::createAnimation('*', ".*.*......") ;
 
     cr_assert_eq(blinkTwiceEveryTenSteps.value(),false);
     cr_assert_eq(blinkTwiceEveryTenSteps.runOnce(),true);
@@ -36,7 +38,7 @@ Test (AnimatedBool, createAnimation_should_create_a_runnable_animation) {
 }
 
 Test (AnimatedBool, setCurrentAnimation_should_select_the_animation_to_replay) {
-    AnimatedBool multipleAnimations = AnimatedBool::createAnimation('*', ".*.*......") ; 
+    AnimatedBool multipleAnimations = AnimatedBool::createAnimation('*', ".*.*......") ;
     multipleAnimations.append(AnimatedBool::createAnimation('*',"****....")) ;
     multipleAnimations.append(AnimatedBool::createAnimation('*',"**....")) ; // animation number 2
     multipleAnimations.append(AnimatedBool::createAnimation('*',"*..")) ; // animation number 3
@@ -79,7 +81,7 @@ Test (AnimatedBool, setCurrentAnimation_should_select_the_animation_to_replay) {
 
 
 Test (AnimatedBool, runOnce_never_loops) {
-    AnimatedBool blinkTwiceEveryTenSteps = AnimatedBool::createAnimation('*', ".*.*......") ; 
+    AnimatedBool blinkTwiceEveryTenSteps = AnimatedBool::createAnimation('*', ".*.*......") ;
 
     cr_assert_eq(blinkTwiceEveryTenSteps.value(),false);
     cr_assert_eq(blinkTwiceEveryTenSteps.runOnce(),true);
@@ -102,7 +104,7 @@ Test (AnimatedBool, runOnce_never_loops) {
 
 
 Test (AnimatedBool, run_always_loops) {
-    AnimatedBool blinkTwiceEveryTenSteps = AnimatedBool::createAnimation('*', ".*.*......") ; 
+    AnimatedBool blinkTwiceEveryTenSteps = AnimatedBool::createAnimation('*', ".*.*......") ;
 
     cr_assert_eq(blinkTwiceEveryTenSteps.value(),false);
     cr_assert_eq(blinkTwiceEveryTenSteps.run(),true);

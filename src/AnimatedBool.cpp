@@ -10,6 +10,8 @@ Created to help you go beyond a simple blinking.
 
 #include "AnimatedBool.hpp"
 
+using cmspk::animval::AnimatedBool ;
+
 std::vector<bool> *AnimatedBool::createAnimation(char asTrue, const std::string sequence)
 {
     std::vector<bool> *result = new std::vector<bool>();
