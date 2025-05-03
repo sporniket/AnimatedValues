@@ -30,7 +30,7 @@ file(GLOB_RECURSE FORMATTABLE_SOURCES
        ${PROJECT_SOURCE_DIR}/src/*.cpp
        ${PROJECT_SOURCE_DIR}/src-tests/*.cpp
 )
-message("Formattable sources -> ${FORMATTABLE_SOURCES}")
+
 add_custom_target(check-prettier
     COMMAND clang-format
     --dry-run
